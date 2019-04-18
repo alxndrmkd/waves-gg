@@ -1,0 +1,44 @@
+Waves-GG
+========
+
+Genesis block generator for waves.
+
+Usage
+=====
+
+```
+USAGE:
+    waves-gg [FLAGS] [OPTIONS] --config <FILE>
+
+FLAGS:
+    -h, --help       Prints help information
+    -V, --version    Prints version information
+    -v, --verbose    Print additional info
+
+OPTIONS:
+    -c, --config <FILE>    Sets a custom config file
+    -o, --output <FILE>    Sets a custom output file
+```
+
+```
+waves-gg -v -c config.yml -o geneis.conf
+```
+
+Config example
+============
+```
+chain_id: "E"
+
+initial_balance: 10000000000000000
+base_target: 100
+average_block_delay: 60000
+timestamp: 1489352400000 # Comment to use the current time
+
+# seed text -> share
+# the sum of shares should be == initial-balance
+distribution:
+  seed1 : 5000000000000000
+  seed2 : 2500000000000000
+  seed3 : 1250000000000000
+  seed4 : 1250000000000000
+```
